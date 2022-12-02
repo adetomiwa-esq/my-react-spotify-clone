@@ -1,0 +1,320 @@
+.left-menu {
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgba(34, 34, 34, 0.8);
+    backdrop-filter: blur(7px);
+    padding: 20px 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.left-menu .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-menu .logo-container i {
+    font-size: 30px;
+}
+
+.left-menu .logo-container i:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.search-box {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-top: 20px;
+    background-color: green;
+    color: #848484;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 35px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.fa-light {
+    color: yellow;
+}
+
+.menu-container {
+    margin: 15px 0;
+}
+
+.menu-container .title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: rgb(170, 163, 163);
+}
+
+.menu-container ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-container ul li {
+    margin: 5px 0px;
+    padding: 5px 0px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: rgb(170, 163, 163);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.menu-container ul li a i {
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.menu-container ul li:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -15px;
+    width: 0;
+    height: 100%;
+    background-color: #49e12e;
+    border-radius: 5px;
+}
+
+.menu-container ul li:hover:before, 
+.menu-container ul li.active:before{
+    width: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-container ul li:hover a,
+.menu-container ul li.active a{
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.playlist-container {
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.playlist-container .name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(170, 163, 163);
+    margin-bottom: 8px;
+}
+
+.playlist-container .name-container p {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.playlist-container .name-container i {
+    cursor: pointer;
+    color: white;
+}
+
+.playlist-container .playlist-scroll {
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.playlist-container .playlist-scroll .playlist {
+    display: flex;
+    color: rgb(170, 163, 163);
+    align-items: center;
+    margin: 10px 0;
+}
+
+.playlist-container .playlist-scroll .playlist:hover {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.playlist-container .playlist-scroll .playlist i {
+    font-size: 18px;
+}
+
+.playlist-container .playlist-scroll .playlist .list {
+    margin-right: 15px;
+}
+
+.playlist-container .playlist-scroll .playlist .trash {
+    margin-left: auto;
+}
+
+.playlist-container .playlist-scroll .playlist p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+
+.track-list {
+    border-top: 1px solid rgba(225, 225, 225, 0.1);
+    padding-top: 20px;
+}
+
+.track-list .top {
+    display: flex;
+    align-items: center;
+}
+
+.track-list .top img {
+    width: 50px !important;
+    height: 40px;
+}
+
+.track-list .top .track-name {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.track-list .top .track-name .track-span {
+    display: block;
+    font-size: 12px;
+    color: #848484;
+}
+
+.track-list .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: rgb(170, 163, 163);
+}
+
+.track-list .bottom i{
+    font-size: 15px;
+}
+
+.track-list .bottom i:hover {
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.track-list .bottom input {
+    position: relative;
+    height: 5px;
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: rgba(200, 180, 225, 0.1);
+}
+
+
+/* Chrome & Safari */
+.track-list .bottom input::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #49e12e;
+    width: 60px;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.track-list .bottom input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: all 250ms linear;
+}
+
+/* firefox */
+.track-list .bottom input::-moz-progress-bar {
+    background-color: #49e12e;
+    width: 60px;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.track-list .bottom input::-moz-range-thumb {
+    background-color: #49e12e;
+    width: 60px;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+
+@media(max-width: 550px){
+    .left-menu {
+        width: 64px;
+        min-width: 64px;
+    }
+
+    .left-menu .search-box {
+        display: none;
+    }
+
+    .left-menu .track-list {
+        display: none;
+    }
+
+    .left-menu .playlist-container {
+        display: none;
+    }
+
+    .left-menu .menu-container ul li a span {
+        display: none;
+    }
+
+    .left-menu .menu-container ul li a i {
+        font-size: 24px;
+    }
+
+    .left-menu .menu-container ul li {
+        margin: 25px 0;
+    }
+
+    .left-menu .logo-container h2 {
+        margin-left: 20px;
+    }
+}
