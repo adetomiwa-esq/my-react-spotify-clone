@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/my-react-spotify-clone' element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
