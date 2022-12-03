@@ -152,6 +152,28 @@
     font-weight: bold;
 }
 
+@media(max-width:900px){
+    .song-img {
+        width: 120px;
+        height: 100%;
+    }
+
+    .music-player {
+        height: 30%;
+        max-height: 30%;
+        margin-top: 15px;
+        padding: 0px;
+    }
+
+    .song-attributes {
+        padding-left: 10px;
+    }
+
+    .song-attributes .bottom {
+        margin-top: 8px;
+    }
+}
+
 @media(max-width:550px){
     .song-img {
         width: 100px;
@@ -172,4 +194,23 @@
         width: 65%;
     }
 
+    .download {
+        display: none;
+    }
+
+
+    .music-player {
+        margin-top: 0px;
+        height: 25%;
+    }
+
+    .song-attributes .bottom .progress-bar {
+        width: 60%;
+    }
+
+
+    .song-attributes .bottom {
+        width: 80%;
+        margin-right: auto;
+    }
 }
