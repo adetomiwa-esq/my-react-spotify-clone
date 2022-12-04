@@ -275,6 +275,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #a5a3a3;
+}
+
+.span-artist {
+    color: #636060;
 }
 
 .song .section .hits {
@@ -377,6 +382,23 @@
         justify-content: space-between;
         margin-left: 10px;
         width: 100%;
+    }
+
+    .init-duration {
+        display: none;
+    }
+
+    .hit {
+        display: none;
+    }
+
+    .song .section .song-name {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .favorite {
+        display: none;
     }
     
     

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaHeadphones, FaRegClock, FaHeart, FaRegHeart } from 'react-icons/fa';
 import MusicPlayer from './MusicPlayer';
-import { Songs } from './Song';
 
 function AudioList() {
   const [songList, setSongList] = useState([])
@@ -21,7 +20,6 @@ function AudioList() {
       .catch(err => console.error(err));
   }, [])
 
-  console.log(songList)
   
   const [song, setSong] = useState()
   const [img, setImg] = useState()
@@ -83,7 +81,7 @@ function AudioList() {
                         <i><FaHeadphones /></i> {song.rank}
                       </p>
 
-                      <p className='duration'>
+                      <p className='duration init-duration'>
                         <i><FaRegClock/></i> 03.04
                       </p>
 
